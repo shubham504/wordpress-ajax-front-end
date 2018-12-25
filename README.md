@@ -8,13 +8,14 @@ wordpress template upload image and form data like title,content, or custome fei
 <input type="text" name="keyword" id="keyword" onkeyup="fetch()"></input>
 
 <div id="datafetch">Search results will appear here</div>
-
+```
 
 
 # function.php 
-```
 // the ajax function
- add_action('wp_ajax_data_fetch' , 'data_fetch');
+
+```
+add_action('wp_ajax_data_fetch' , 'data_fetch');
 add_action('wp_ajax_nopriv_data_fetch','data_fetch');
 function data_fetch(){
 
@@ -32,7 +33,7 @@ function data_fetch(){
 }
 ```
 // add the ajax fetch js
-
+```
 add_action( 'wp_footer', 'ajax_fetch' );
 function ajax_fetch() {
 ?>
@@ -53,4 +54,4 @@ function fetch(){
 
 <?php
 }
-
+```
