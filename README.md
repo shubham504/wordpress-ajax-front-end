@@ -4,11 +4,11 @@ wordpress template upload image and form data like title,content, or custome fei
 
 
 # template-page.php 
-<pre>
+
 <input type="text" name="keyword" id="keyword" onkeyup="fetch()"></input>
 
 <div id="datafetch">Search results will appear here</div>
-</pre>
+
 
 
 # function.php 
@@ -30,9 +30,10 @@ function data_fetch(){
 
     die();
 }
-
-
+</pre>
+<pre>
 // add the ajax fetch js
+
 add_action( 'wp_footer', 'ajax_fetch' );
 function ajax_fetch() {
 ?>
